@@ -4,7 +4,7 @@ from PIL import Image, PngImagePlugin
 from pathlib import Path
 import base64
 import io
-import torch
+#import torch
 import pandas as pd
 
 
@@ -53,7 +53,7 @@ def generate_images(base_url, payload, image_number, output_directory, image_nam
         pnginfo.add_text("parameters", response2.json().get("info"))
         image_path = Path(output_directory) / image_name_format.format(image_number+1)
         image.save(image_path, pnginfo=pnginfo)
-        torch.cuda.empty_cache()
+        #torch.cuda.empty_cache()
 
 # Load the CSV file into a DataFrame
 df = pd.read_csv('inputs.csv')

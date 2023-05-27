@@ -1,4 +1,4 @@
 requests
 Pillow
-torch
+# torch
 pandas
